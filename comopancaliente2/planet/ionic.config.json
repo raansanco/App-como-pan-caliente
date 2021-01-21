@@ -1,0 +1,7 @@
+{
+  "name": "planet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

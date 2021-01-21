@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="amarillo">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tabmenu"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+   
+    <ion-card-content>
+      <div class="text-align: center !important;">
+        <img src="https://tupangourmet.com/tupancaliente/vista/{{items.imagen}}">
+      </div >
+        <div class="text-align: center !important;"><h2><strong>{{items.nombre}}</strong></h2></div><br>
+        <ion-row class="align-center"><h2>{{items.descripcion}}</h2></ion-row>
+        <div class="text-align: center !important; ion-margin-top" ><strong>Precio: ${{items.precio}}</strong></div><br>
+        <ion-row style="height: 80px;">
+            
+
+          <div style="text-align: center !important;">
+            <ion-item no padding>
+            <h6 style="text-align: center !important;"><strong>Cantidad:</strong></h6>
+            <ion-icon style="padding-left: 2%;" name="remove-circle-outline" (click)="quitarCantidad()"></ion-icon>
+            <input value="number" readonly style="border-radius: 5px; border-color: #ffc409;width: 30px; text-align: center;" [(ngModel)]="cantidad">
+            <ion-icon  name="add-circle-outline" (click)="agregarCantidad()"></ion-icon>
+          </ion-item>
+          </div>
+            
+          
+           
+
+          
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+        
+          <ion-col  class="center" >
+            <ion-button color="azul" (click)="ver(); recibir(items); tryCarrito()">Agregar al carrito</ion-button>
+          </ion-col>
+        </ion-row>
+      
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

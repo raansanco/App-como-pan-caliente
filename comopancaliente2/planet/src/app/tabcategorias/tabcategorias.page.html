@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="amarillo">
+    <ion-title>Categorias</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="consultarPedidos()">
+        <ion-icon class="rounded" style="width: 30px; height: 30px; border-radius: 10px;" name="cart"></ion-icon>
+
+      </ion-button>
+      <ion-button (click)="goToMiCuenta()">
+        <ion-icon style="width: 30px; height: 30px;" name="person-circle"></ion-icon>
+
+      </ion-button>
+      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (click)="recibir(item.id_categoria)" wrap *ngFor="let item of categorias; let index = index">
+    <div style="background-color: black;">
+      <ion-row class="center" >
+        <font 
+          style="position: absolute; color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+          <strong>
+            <h2>{{item.categoria}}</h2>
+          </strong></font>
+        <img style="opacity: 0.75; position:relative;" src="https://tupangourmet.com/tupancaliente/vista/{{item.imagen}}">
+      </ion-row>
+    </div>
+
+
+
+  </ion-card>
+</ion-content>

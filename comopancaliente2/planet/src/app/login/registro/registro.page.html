@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="amarillo" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content><br>
+  <div class="text-align: center !important;" >
+  <ion-icon name="person-add" style="height: 80px; width: 80px;"></ion-icon>
+</div>
+
+      <ion-card>
+        <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="nombre" placeholder="Nombre">
+          </ion-input></ion-item>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="apellido" placeholder="Apellido">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="documento" placeholder="Documento">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="telefono" placeholder="Telefono">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="correo" placeholder="Correo Electronico">
+            </ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-input type="password" [(ngModel)]="contrasena" placeholder="Contraseña">
+            </ion-input>
+           </ion-item>
+           <ion-item >
+            <ion-input type="text" [(ngModel)]="direccion" placeholder="Dirección">
+            </ion-input>
+           </ion-item>
+           <div class="ion-margin-top ion-text-center">
+            <ion-button (click)="tryRegister()" [disabled]="disabledButton" color="azul">
+               Registrarse
+             </ion-button>
+           </div>
+           
+      </ion-list>
+      </ion-card-content>
+      
+      </ion-card>
+    
+</ion-content>
+
+
+

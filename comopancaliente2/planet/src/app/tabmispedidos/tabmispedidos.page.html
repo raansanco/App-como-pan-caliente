@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="amarillo">
+    <ion-title>
+      Mis Pedidos
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToCarritoDeCompras()">
+        <ion-icon style="width: 30px; height: 30px;" name="cart"></ion-icon>
+
+      </ion-button>
+      <ion-button (click)="goToMiCuenta()">
+        <ion-icon style="width: 30px; height: 30px;" name="person-circle"></ion-icon>
+
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card wrap *ngFor="let items of mispedidos; let index = index">
+    <ion-card-content>
+      <ion-row style="border: solid 1px rgb(230, 227, 227); border-radius: 5px;">
+        <ion-col>
+
+          <div>
+            <strong>Pedido #{{items.id_pedido}}</strong>
+          </div>
+
+          <div>
+            <strong>Productos:</strong>
+            <font size=2.5> {{items.pedido}}</font>
+          </div>
+        </ion-col>
+
+      </ion-row>
+      <ion-row style="border: solid 1px rgb(230, 227, 227); border-radius: 5px;">
+        <ion-col>
+          <div><strong>Total:</strong><br>${{items.total}}</div>
+        </ion-col>
+        <ion-col>
+          <div><strong>Estado:</strong><br>{{items.estado}}</div>
+        </ion-col>
+      </ion-row>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
